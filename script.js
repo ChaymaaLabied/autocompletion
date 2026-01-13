@@ -13,19 +13,28 @@ input.addEventListener("input", () => {
     .then((data) => {
       list.innerHTML = "";
 
-      // Exact
       data.exact.forEach((el) => {
-        list.innerHTML += `<li><strong>${el.name}</strong></li>`;
+        list.innerHTML += `<li onclick="goToElement(${el.id})"><strong>${el.name}</strong></li>`;
       });
 
-      // Séparateur si contain existe
       if (data.contain.length) {
         list.innerHTML += `<li class="separator">---</li>`;
       }
 
-      // Contain
       data.contain.forEach((el) => {
-        list.innerHTML += `<li>${el.name}</li>`;
+        list.innerHTML += `<li onclick="goToElement(${el.id})">${el.name}</li>`;
       });
     });
+});
+
+// Fonction pour aller vers element.php
+function goToElement(id) {
+  window.location.href = "element.php?id=" + id;
+}
+
+// Entrée dans input redirige vers recherche.php
+input.addEventListener("keydown", function (e) {
+  if (e.key === "Enter") {
+    window.location.href = "recherche.php?search=" + input.value;
+  }
 });

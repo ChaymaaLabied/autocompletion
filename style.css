@@ -40,3 +40,12 @@ li:hover {
   font-weight: bold;
   text-align: center;
 }
+li {
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer; /* montre que c’est cliquable */
+}
+
+li:hover {
+  background-color: #f0f0f0;
+}

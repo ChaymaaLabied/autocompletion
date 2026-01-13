@@ -4,15 +4,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Recherche Autocompletion</title>
+    <title>Recherche Taylor Swift</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <header>
-        <h1>Rechercher un Pokémon</h1>
-        <input type="text" id="search" placeholder="Tapez ici...">
+        <h1>Recherche des chansons de Taylor Swift</h1>
+        <input type="text" id="search" placeholder="Tapez un titre...">
         <ul id="suggestions"></ul>
     </header>
 
